@@ -85,8 +85,8 @@ joy_teleop:
     autonomous_control:
       type: topic
       interface_type: std_msgs/msg/Int8
-      topic_name: /dev/null
+      topic_name: enable_autonomous
       deadman_buttons: [3]
       message_value:
         data:
-          value: 0
+          value: 1
