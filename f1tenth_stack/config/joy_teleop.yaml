@@ -22,6 +22,7 @@ joy_teleop:
           scale: 0.0
           offset: 0.0
 
+    # Slow Control
     human_control_forward_slow:
       type: topic
       interface_type: ackermann_msgs/msg/AckermannDriveStamped
@@ -52,6 +53,7 @@ joy_teleop:
           scale: 0.28
           offset: 0.0304
 
+    # Fast Control
     human_control_forward_sicko_mode:
       type: topic
       interface_type: ackermann_msgs/msg/AckermannDriveStamped
@@ -82,11 +84,12 @@ joy_teleop:
           scale: 0.28
           offset: 0.0304
 
-    autonomous_control:
-      type: topic
-      interface_type: std_msgs/msg/Int8
-      topic_name: enable_autonomous
-      deadman_buttons: [3]
-      message_value:
-        data:
-          value: 1
+    # Deprecated. We implemented our own autonomy mode from joy directly
+    # autonomous_control:
+    #   type: topic
+    #   interface_type: std_msgs/msg/Int8
+    #   topic_name: enable_autonomous
+    #   deadman_buttons: [3]
+    #   message_value:
+    #     data:
+    #       value: 1
